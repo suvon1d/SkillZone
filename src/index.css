@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: night --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "night";
+  default: true;
+  --color-base-100: #0b0e13;
+  --color-base-200: #11161d;
+  --color-base-300: #18222c;
+  --color-base-content: #e0e1dd;
+}
+
+.btn-primary {
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #1b2a3a, #4e78a8);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  filter: brightness(1.5);
+}
+
+* {
+  font-family: "Lato", sans-serif;
+}

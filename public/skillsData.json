@@ -1,0 +1,110 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Full Stack Web Development",
+    "providerName": "John Doe",
+    "providerEmail": "john@skillswap.com",
+    "price": 15000,
+    "rating": 4.8,
+    "slotsAvailable": 15,
+    "description": "This course covers everything from front-end development using HTML, CSS, and JavaScript to back-end development with Node.js and databases. You will learn to build fully functional websites and web applications, implement responsive designs, and work on real-world projects to enhance your portfolio.",
+    "image": "https://i.ibb.co.com/nNQHbsFV/wed-development.jpg",
+    "category": "Web Development"
+  },
+  {
+    "skillId": 2,
+    "skillName": "SEO & Social Media Marketing",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 12000,
+    "rating": 4.7,
+    "slotsAvailable": 12,
+    "description": "Learn how to create effective digital marketing campaigns, optimize websites for search engines, and leverage social media platforms to reach target audiences. This course includes practical exercises, real case studies, and strategies to increase brand awareness and drive traffic.",
+    "image": "https://i.ibb.co.com/xcP1XkD/digital-marketing-is.jpg",
+    "category": "Digital Marketing"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Python for Data Science",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 18000,
+    "rating": 4.9,
+    "slotsAvailable": 14,
+    "description": "Dive into data science using Python, including data cleaning, visualization, and statistical analysis. Learn how to work with libraries like Pandas, NumPy, and Matplotlib, and apply machine learning algorithms to solve real-world problems. Perfect for beginners aiming to become data scientists.",
+    "image": "https://i.ibb.co.com/GSkKVwk/data-scienists.jpg",
+    "category": "Data Science"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Adobe Photoshop & Illustrator",
+    "providerName": "Lisa White",
+    "providerEmail": "lisa@skillswap.com",
+    "price": 11000,
+    "rating": 4.6,
+    "slotsAvailable": 13,
+    "description": "Learn to create stunning digital artwork, graphics, and branding materials using Adobe Photoshop and Illustrator. This course covers photo editing, vector illustration, logo design, typography, and composition techniques, giving you the skills to work on professional design projects.",
+    "image": "https://i.ibb.co.com/d0b0v59X/graphic-design.jpg",
+    "category": "Graphic Design"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Figma & UX Principles",
+    "providerName": "Mark Taylor",
+    "providerEmail": "mark@skillswap.com",
+    "price": 14000,
+    "rating": 4.7,
+    "slotsAvailable": 16,
+    "description": "Master the essentials of UX/UI design using Figma. Learn to conduct user research, create wireframes and prototypes, design interactive user interfaces, and improve user experiences. This course helps you understand the entire design process from concept to implementation.",
+    "image": "https://i.ibb.co.com/pvzDRF3q/ux-ui-design.jpg",
+    "category": "UX/UI Design"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Premiere Pro & Final Cut Editing",
+    "providerName": "Emily Brown",
+    "providerEmail": "emily@skillswap.com",
+    "price": 13000,
+    "rating": 4.5,
+    "slotsAvailable": 15,
+    "description": "Learn professional video editing techniques using Adobe Premiere Pro and Final Cut Pro. The course covers video cutting, transitions, color correction, sound editing, special effects, and exporting videos for different platforms. Ideal for aspiring YouTubers, filmmakers, and content creators.",
+    "image": "https://i.ibb.co.com/35nY0dg0/video-editing.jpg",
+    "category": "Video Editing"
+  },
+  {
+    "skillId": 7,
+    "skillName": "AI & Machine Learning Projects",
+    "providerName": "Priya Sen",
+    "providerEmail": "priya@skillswap.com",
+    "price": 20000,
+    "rating": 4.9,
+    "slotsAvailable": 12,
+    "description": "Explore artificial intelligence and machine learning concepts through hands-on projects. Learn to build neural networks, implement AI algorithms, and develop predictive models. This course is designed for students and professionals looking to apply AI in real-world applications and enhance problem-solving skills.",
+    "image": "https://i.ibb.co.com/3mPSjJGh/AI.jpg",
+    "category": "Artificial Intelligence"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Ethical Hacking Basics",
+    "providerName": "Amit Roy",
+    "providerEmail": "amit@skillswap.com",
+    "price": 17000,
+    "rating": 4.8,
+    "slotsAvailable": 14,
+    "description": "Learn the fundamentals of cybersecurity and ethical hacking, including network security, penetration testing, vulnerability assessment, and risk management. This course provides hands-on labs and exercises to practice defensive and offensive security techniques safely.",
+    "image": "https://i.ibb.co.com/p6GRMz8m/cyber-security.jpg",
+    "category": "Cyber Security"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Flutter & React Native App Development",
+    "providerName": "Carlos Gomez",
+    "providerEmail": "carlos@skillswap.com",
+    "price": 19000,
+    "rating": 4.7,
+    "slotsAvailable": 13,
+    "description": "Learn how to develop cross-platform mobile applications using Flutter and React Native. This course covers UI design, state management, API integration, deployment to App Store and Google Play, and real-world app development projects to build your portfolio.",
+    "image": "https://i.ibb.co.com/HfbFBjzG/app-development.jpg",
+    "category": "App Development"
+  }
+]
