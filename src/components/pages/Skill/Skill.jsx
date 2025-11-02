@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Skill = ({ skill }) => {
-  const { image, skillName, rating, price, category } = skill;
+  const { skillId, image, skillName, rating, price, category } = skill;
   return (
     <div className="card bg-base-100 shadow-sm group">
       <figure className="h-64 w-full rounded-2xl ">
@@ -20,7 +21,9 @@ const Skill = ({ skill }) => {
           Course Fee <span className="text-[#eac435] text-xl">{price}</span> BDT
         </p>
         <div className="card-actions justify-start">
-          <button className="btn btn-xs btn-primary">View Details</button>
+          <Link to={`/skill/${skillId}`} className="btn btn-xs btn-primary">
+            View Details
+          </Link>
         </div>
       </div>
     </div>

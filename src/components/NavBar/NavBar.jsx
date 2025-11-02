@@ -1,12 +1,12 @@
-import React from "react";
-import { NavLink } from "react-router";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router";
 import icon from "../../assets/icons8-student-male-100.png";
 
 const NavBar = () => {
+  const [hover, setHover] = useState(false);
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/courses">Courses</NavLink>
       <NavLink to="/profile">Profile</NavLink>
     </>
   );
@@ -50,12 +50,28 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <div className="avatar">
+          <div
+            className="relative avatar "
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
             <div className="w-12 rounded-full">
               <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
             </div>
+            <span
+              className={`absolute mt-14 text-xs text-nowrap ${
+                hover ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              Hello Borda
+            </span>
           </div>
-          <a className="btn-primary">Log in</a>
+          <Link to="/auth/login" className=" btn btn-primary">
+            Log in
+          </Link>
+          <Link to="/auth/register" className=" btn btn-primary">
+            Sign Up
+          </Link>
         </div>
       </div>
       <hr className="border-[#1b2a3a] mt-2" />
