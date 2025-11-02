@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router";
 import icon from "../../assets/icons8-student-male-100.png";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const NavBar = () => {
   const [hover, setHover] = useState(false);
@@ -12,7 +13,7 @@ const NavBar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto">
+      <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto flex-col md:flex-row">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
