@@ -5,6 +5,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../components/pages/Login/Login";
 import Register from "../components/pages/Register/Register";
 import Profile from "../components/pages/Profile/Profile";
+import SkillDetails from "../components/pages/SkillDetails/SkillDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/skill/:id",
-        element: <h1 className="text-3xl">Courses Layout</h1>,
+        element: <SkillDetails></SkillDetails>,
+        loader: () => fetch("/skillsData.json"),
       },
     ],
   },
