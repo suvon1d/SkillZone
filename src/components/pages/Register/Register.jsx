@@ -1,25 +1,42 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const navigate = useNavigate();
+
+  const [nameError, setNameError] = useState("");
+  const [passError, setPassError] = useState("");
+
+  const { createUser, setUser, updateUser } = use(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    if (name.length < 4) {
+      setNameError("Name must be at least 4 characters");
+    }
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        setUser(user);
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((error) => {
+            alert(error);
+            setUser(user);
+          });
+
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage, errorCode);
+        setPassError(errorMessage, errorCode);
       });
   };
   return (
@@ -37,6 +54,7 @@ const Register = () => {
               className="input bg-base-300 w-full font-black p-5"
               placeholder="Name"
             />
+            {nameError && <p className="text-error">{nameError}</p>}
             {/* Email */}
             <input
               name="email"
@@ -61,6 +79,12 @@ const Register = () => {
               placeholder="Password"
               required
             />
+
+            {passError && (
+              <p className="text-red-500">
+                Password should be at least 6 characters
+              </p>
+            )}
 
             <button className="btn btn-primary font-black">Register</button>
             <p className="font-bold text-lg text-center">

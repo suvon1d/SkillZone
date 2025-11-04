@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import { Link, NavLink } from "react-router";
 import icon from "../../assets/icons8-student-male-100.png";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { FaUserLarge } from "react-icons/fa6";
 
 const NavBar = () => {
   const { user, logOut } = use(AuthContext);
@@ -19,8 +20,7 @@ const NavBar = () => {
         alert("you LogOut sucsfully");
       })
       .catch((error) => {
-        // An error happened.
-        console.log(error);
+        alert(error)
       });
   };
   return (
@@ -72,14 +72,18 @@ const NavBar = () => {
                 onMouseLeave={() => setHover(false)}
               >
                 <div className="w-12 rounded-full">
-                  <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                  <img
+                    src={user.photoURL}
+                    alt="User"
+                    className="text-green-400"
+                  />
                 </div>
                 <span
                   className={`absolute mt-14 text-xs text-nowrap ${
                     hover ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  Hello Borda
+                  {user.displayName}
                 </span>
               </div>
               <button onClick={handleLogOut} className=" btn btn-primary">

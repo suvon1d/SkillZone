@@ -6,6 +6,8 @@ import Login from "../components/pages/Login/Login";
 import Register from "../components/pages/Register/Register";
 import Profile from "../components/pages/Profile/Profile";
 import SkillDetails from "../components/pages/SkillDetails/SkillDetails";
+import PrivateRoute from "../AuthProvider/PrivateRoute";
+import Loading from "../components/pages/Loading/Loading";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +17,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
-      },
-      {
-        path: "/skill/:id",
-        element: <SkillDetails></SkillDetails>,
-        loader: () => fetch("/skillsData.json"),
       },
     ],
   },
@@ -36,6 +33,16 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "/skill/:id",
+    element: (
+      <PrivateRoute>
+        <SkillDetails></SkillDetails>
+      </PrivateRoute>
+    ),
+    loader: () => fetch("/skillsData.json"),
+    hasErrorBoundary:<Loading></Loading>
   },
   {
     path: "/profile",
