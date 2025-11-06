@@ -4,10 +4,7 @@ const HowItWorks = () => {
   return (
     <section className="how-it-works-section  py-20 mt-24">
       <div className="md:container mx-auto px-4">
-        <h2
-          className="text-5xl font-bold text-primary text-center mb-12"
-          data-aos="fade-up"
-        >
+        <h2 className="text-5xl font-bold text-primary text-center mb-12">
           How It's Works
         </h2>
 

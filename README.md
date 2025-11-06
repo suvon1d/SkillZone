@@ -1,16 +1,28 @@
-# React + Vite
+# SkillZone - Online Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkillZone is a Online Learning Platform.
+Where student can learn couses base on skills.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**This project has been created with the goal that people can easily learn their preferred skills and gain a practical, real-world learning experience**
 
-## React Compiler
+## Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://skill-zone-aef80.web.app
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Top Rated Course Instructors**
+- **Skill Category Wise Course Listing**
+- **Student Review Section**
+- **User Authentication (Login / Register)**
+- **Responsive Design (Mobile + Tablet + Desktop)**
+- **Modern UI with Tailwind CSS**
+
+## NPM Packages Used
+
+- **npm install react-router-dom**
+- **npm install firebase**
+- **npm install react-icons**
+- **npm install swiper**
