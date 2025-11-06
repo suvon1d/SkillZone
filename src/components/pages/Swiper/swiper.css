@@ -1,7 +1,7 @@
 /* src/components/pages/Swiper/swiper.css */
 .mySwiper {
   width: 100%;
-  height: 800px;
+  height: 900px;
 }
 
 .slide-box {
@@ -12,4 +12,16 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+}
+
+@media screen and (max-width: 576px) {
+  .mySwiper {
+    width: 100%;
+    height: 200px;
+  }
+  /* .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
 }

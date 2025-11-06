@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import icon from "../../assets/icons8-student-male-100.png";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { FaUserLarge } from "react-icons/fa6";
+import toast, { Toaster } from "react-hot-toast";
 
 const NavBar = () => {
   const { user, logOut } = use(AuthContext);
@@ -17,16 +18,16 @@ const NavBar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        alert("you LogOut sucsfully");
+        toast.success("you LogOut successfully");
       })
       .catch((error) => {
-        alert(error)
+        alert(error);
       });
   };
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto flex-col md:flex-row">
-        <div className="navbar-start">
+      <div className="navbar bg-base-100 shadow-sm md:w-11/12 mx-auto flex-col md:flex-row">
+        <div className="navbar-start w-full">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -47,7 +48,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex="1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 space-y-3 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-2 w-36 p-1 space-y-3 shadow"
             >
               {links}
             </ul>
@@ -62,7 +63,7 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <div className="navbar-end gap-3">
+        <div className="navbar-end gap-3 w-full">
           {/* ternary button and avatar */}
           {user ? (
             <div>
@@ -71,22 +72,23 @@ const NavBar = () => {
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
               >
-                <div className="w-12 rounded-full">
+                <div className="w-10 rounded-full">
                   <img
-                    src={user.photoURL}
+                    src={user && user.photoURL}
                     alt="User"
                     className="text-green-400"
                   />
                 </div>
                 <span
-                  className={`absolute mt-14 text-xs text-nowrap ${
+                  className={`absolute mt-12 text-xs text-nowrap ${
                     hover ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  {user.displayName}
+                  {user && user.displayName}
                 </span>
               </div>
               <button onClick={handleLogOut} className=" btn btn-primary">
+                <Toaster position="top-right" reverseOrder={false} />
                 Log Out
               </button>
             </div>

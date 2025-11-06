@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import SkillDetailsCard from "../SkillDetailsCard/SkillDetailsCard";
 import NavBar from "../../NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 
 const SkillDetails = () => {
   const data = useLoaderData();
@@ -20,6 +21,10 @@ const SkillDetails = () => {
       <main className="my-24">
         <SkillDetailsCard skillsData={skillsData}></SkillDetailsCard>
       </main>
+
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import Profile from "../components/pages/Profile/Profile";
 import SkillDetails from "../components/pages/SkillDetails/SkillDetails";
 import PrivateRoute from "../AuthProvider/PrivateRoute";
 import Loading from "../components/pages/Loading/Loading";
+import ErrorPage from "../components/pages/ErorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -42,15 +43,19 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: () => fetch("/skillsData.json"),
-    hasErrorBoundary:<Loading></Loading>
+    hasErrorBoundary: <Loading></Loading>,
   },
   {
     path: "/profile",
-    element: <Profile></Profile>,
+    element: (
+      <PrivateRoute>
+        <Profile></Profile>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/*",
-    element: <h1 className="text-3xl">Error Page</h1>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
